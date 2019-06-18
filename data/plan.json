@@ -1,0 +1,101 @@
+{
+    "level": "Intermediate",
+    "planType": "CARA",
+    "length": 18,
+    "weeks": [
+        [
+            {
+                "date": "June 10th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "3",
+                "units": "miles"
+            },
+            {
+                "date": "June 11th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "4",
+                "units": "miles"
+            },
+            {
+                "date": "June 12th 2019",
+                "activity": "Speedwork",
+                "pace": "5K to 10K",
+                "distance": [ 400 ],
+                "units": "meters",
+                "repetitions": [2, 3],
+                "restInterval": "Equal jog recovery"
+            },
+            {
+                "date": "June 13th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "3",
+                "units": "miles"
+            },
+            {
+                "date": "June 14th 2019",
+                "activity": "Rest Day"
+            },
+            {
+                "date": "June 15th 2019",
+                "activity": "Run",
+                "pace": "Long",
+                "distance": "8",
+                "units": "miles"
+            },
+            {
+                "date": "June 16th 2019",
+                "activity": "Rest Day"
+            }
+        ],
+        [
+            {
+                "date": "June 17th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "4",
+                "units": "miles"
+            },
+            {
+                "date": "June 18th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "5",
+                "units": "miles"
+            },
+            {
+                "date": "June 19th 2019",
+                "activity": "Speedwork",
+                "pace": "5K to 10K",
+                "distance": [ 400 ],
+                "units": "meters",
+                "repetitions": [6, 8],
+                "restInterval": "Equal jog recovery"
+            },
+            {
+                "date": "June 20th 2019",
+                "activity": "Run",
+                "pace": "Tempo",
+                "distance": "4",
+                "units": "miles"
+            },
+            {
+                "date": "June 21st 2019",
+                "activity": "Rest Day"
+            },
+            {
+                "date": "June 22nd 2019",
+                "activity": "Run",
+                "pace": "Long",
+                "distance": "9",
+                "units": "miles"
+            },
+            {
+                "date": "June 23rd 2019",
+                "activity": "Rest Day"
+            }
+        ]
+    ]
+}
