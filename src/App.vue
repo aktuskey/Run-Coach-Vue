@@ -9,10 +9,8 @@
     </div>
     <div class="plan-card">
       <div class="plan-card__date" v-html="getDayPlan.date"></div>
-      <!-- <h1 v-if="isAnIntervalDay"></h1>
-      <h1 v-else-if="isARestDay"></h1> -->
-      <h1 v-html="getDayPlan.distance + ' ' + getDayPlan.units"></h1>
-      <div v-html="getDayPlan.pace + ' run'"></div>
+      <h1 v-html="getDistance(getDayPlan)"></h1>
+      <!-- <div v-html="getDayPlan.pace"></div> -->
     </div>
     <button v-on:click="decrementDay()">Back</button>
     <button v-on:click="incrementDay()">Next</button>
@@ -67,6 +65,15 @@ export default {
     },
     decrementDay() {
       this.date = moment(this.date, 'MMMM Do YYYY').subtract(1, 'd').format('MMMM Do YYYY')
+    },
+    getDistance(plan) {
+      if (plan.activity == 'Run') {
+        return plan.distance
+      } else if (plan.activity == 'Speedwork') {
+        return plan.distance.join(', ')
+      } else if (plan.activity == 'Rest Day') {
+        return plan.activity
+      }
     }
   }
 }

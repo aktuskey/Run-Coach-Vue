@@ -7,32 +7,28 @@
             {
                 "date": "June 10th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
                 "distance": "3",
-                "units": "miles"
+                "pace": "Standard"
             },
             {
                 "date": "June 11th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
                 "distance": "4",
-                "units": "miles"
+                "pace": "Standard"
             },
             {
                 "date": "June 12th 2019",
                 "activity": "Speedwork",
+                "distance": [ "400m" ],
                 "pace": "5K to 10K",
-                "distance": [ 400 ],
-                "units": "meters",
                 "repetitions": [2, 3],
                 "restInterval": "Equal jog recovery"
             },
             {
                 "date": "June 13th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
-                "distance": "3",
-                "units": "miles"
+                "pace": "Standard",
+                "distance": "3"
             },
             {
                 "date": "June 14th 2019",
@@ -41,9 +37,8 @@
             {
                 "date": "June 15th 2019",
                 "activity": "Run",
-                "pace": "Long",
                 "distance": "8",
-                "units": "miles"
+                "pace": "Easy"
             },
             {
                 "date": "June 16th 2019",
@@ -54,32 +49,28 @@
             {
                 "date": "June 17th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
                 "distance": "4",
-                "units": "miles"
+                "pace": "Standard"
             },
             {
                 "date": "June 18th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
                 "distance": "5",
-                "units": "miles"
+                "pace": "Standard"
             },
             {
                 "date": "June 19th 2019",
                 "activity": "Speedwork",
+                "distance": [ "400m" ],
                 "pace": "5K to 10K",
-                "distance": [ 400 ],
-                "units": "meters",
                 "repetitions": [6, 8],
                 "restInterval": "Equal jog recovery"
             },
             {
                 "date": "June 20th 2019",
                 "activity": "Run",
-                "pace": "Tempo",
                 "distance": "4",
-                "units": "miles"
+                "pace": "Standard"
             },
             {
                 "date": "June 21st 2019",
@@ -88,12 +79,137 @@
             {
                 "date": "June 22nd 2019",
                 "activity": "Run",
-                "pace": "Long",
                 "distance": "9",
-                "units": "miles"
+                "pace": "Easy"
             },
             {
                 "date": "June 23rd 2019",
+                "activity": "Rest Day"
+            }
+        ],
+        [
+            {
+                "date": "June 24th 2019",
+                "activity": "Run",
+                "distance": "4",
+                "pace": "Standard"
+            },
+            {
+                "date": "June 25th 2019",
+                "activity": "Run",
+                "distance": "5",
+                "pace": "Standard"
+            },
+            {
+                "date": "June 26th 2019",
+                "activity": "Speedwork",
+                "distance": [ "600m" ],
+                "pace": "5K to 10K",
+                "repetitions": [6, 8],
+                "restInterval": "Equal jog recovery"
+            },
+            {
+                "date": "June 27th 2019",
+                "activity": "Run",
+                "distance": "3",
+                "pace": "Standard"
+            },
+            {
+                "date": "June 28th 2019",
+                "activity": "Rest Day"
+            },
+            {
+                "date": "June 29th 2019",
+                "activity": "Run",
+                "distance": "7",
+                "pace": "Easy"
+            },
+            {
+                "date": "June 30th 2019",
+                "activity": "Rest Day"
+            }
+        ],
+        [
+            {
+                "date": "July 1st 2019",
+                "activity": "Run",
+                "distance": "4",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 2nd 2019",
+                "activity": "Run",
+                "distance": "5",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 3rd 2019",
+                "activity": "Speedwork",
+                "distance": [ "800m" ],
+                "pace": "Marathon",
+                "repetitions": [6, 8],
+                "restInterval": "2 mins"
+            },
+            {
+                "date": "July 4th 2019",
+                "activity": "Run",
+                "distance": "5",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 5th 2019",
+                "activity": "Rest Day"
+            },
+            {
+                "date": "July 6th 2019",
+                "activity": "Run",
+                "distance": "11",
+                "pace": "Easy"
+            },
+            {
+                "date": "July 7th 2019",
+                "activity": "Rest Day"
+            }
+        ],
+        [
+            {
+                "date": "July 8th 2019",
+                "activity": "Run",
+                "distance": "5",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 9th 2019",
+                "activity": "Run",
+                "distance": "6",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 10th 2019",
+                "activity": "Speedwork",
+                "distance": [ "200m", "400m", "600m", "800m", "600m", "400m", "200m" ],
+                "pace": "5K",
+                "repetitions": [1],
+                "restInterval": "Equal jog recovery"
+            },
+            {
+                "date": "July 11th 2019",
+                "activity": "Run",
+                "distance": "6",
+                "pace": "Standard"
+            },
+            {
+                "date": "July 12th 2019",
+                "activity": "Rest Day"
+            },
+            {
+                "date": "July 13th 2019",
+                "activity": "Run",
+                "distance": "12",
+                "pace": "Easy"
+            },
+            {
+                "date": "July 14th 2019",
                 "activity": "Rest Day"
             }
         ]
