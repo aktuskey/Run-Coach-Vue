@@ -1,14 +1,16 @@
 <template>
   <div class="wrapper">
-    <header class="header"> 
+    <header class="header">
+      <div class="profile__img" v-bind:style="{ 'background-image': 'url(' + profile.profileImage + ')' }"></div> 
+      <img v-bind:src="profile.profileImage">
       <div class="profile__name">{{ profile.firstName }}</div>
-    </header>
-    <div class="tracker">
+      <div class="tracker">
       <!-- <div class="tracker__week">Week 1</div> -->
       <div class="tracker__count" v-html="getDaysUntil + ' Days to Go!'"></div>
+      <div class="tracker__date" v-html="getDayPlan.date"></div>
     </div>
+    </header>
     <div class="plan-card">
-      <div class="plan-card__date" v-html="getDayPlan.date"></div>
       <h1 v-html="getDistance(getDayPlan)"></h1>
       <!-- <div v-html="getDayPlan.pace"></div> -->
     </div>
@@ -71,16 +73,10 @@ export default {
         return plan.distance
       } else if (plan.activity == 'Speedwork') {
         return plan.distance.join(', ')
-      } else if (plan.activity == 'Rest Day') {
+      } else if (plan.activity == 'Rest') {
         return plan.activity
       }
     }
   }
 }
 </script>
-
-<style scoped>
-  .wrapper {
-    text-align: center;
-  }
-</style>
