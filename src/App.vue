@@ -1,17 +1,33 @@
 <template>
   <div class="wrapper">
     <header class="header">
-      <div class="profile__img" v-bind:style="{ 'background-image': 'url(' + profile.profileImage + ')' }"></div> 
-      <div class="profile__name">{{ profile.firstName }}</div>
+      <div class="profile">
+        <div class="profile__img" v-bind:style="{ 'background-image': 'url(' + profile.profileImage + ')' }"></div> 
+        <div class="profile__name">{{ profile.firstName }}</div>
+      </div>
       <div class="tracker">
       <!-- <div class="tracker__week">Week 1</div> -->
       <div class="tracker__count" v-html="getDaysUntil + ' Days to Go!'"></div>
+      <div class="tracker__progress">
+          <div class="tracker__progress__bar" v-bind:style="progressBarStyle"></div>
+        </div>
       <div class="tracker__date" v-html="getDayPlan.date"></div>
     </div>
     </header>
     <div class="plan-card">
-      <h1 v-html="getDistance(getDayPlan)"></h1>
-      <!-- <div v-html="getDayPlan.pace"></div> -->
+      <div class="plan-card__text-wrapper">
+        <h1 v-html="getDistance(getDayPlan)" class="plan-card__distance"></h1>
+        <div v-if="isARun(getDayPlan)" class="plan-card__units">Miles</div>
+        <div v-if="isARestDay(getDayPlan)" class="plan-card__note">You earned it.</div>
+        <div v-if="isSpeedwork(getDayPlan)" class="plan-card__note" v-html="'Repetitions: ' + ' / ' + 'Rest: ' + getDayPlan.restInterval"></div>
+        <!-- <div v-html="getDayPlan.pace"></div> -->
+      </div>
+      <button class="log-btn" v-on:click="logRun(getDayPlan)">
+        <img v-if="isLogged(getDayPlan)" src="/src/assets/check-green.svg">
+        <img v-else src="/src/assets/check.svg">
+      </button>
+      <div v-if="isLogged(getDayPlan)">Completed!</div>
+      <div v-else>Log Run</div>
     </div>
     <button v-on:click="decrementDay()">Back</button>
     <button v-on:click="incrementDay()">Next</button>
@@ -36,6 +52,17 @@ export default {
     raceDate () {
       return this.profile.targetRaceDate
     },
+    getPlanStartDate () {
+      let firstWeek = this.plan.weeks[0]
+      let start = firstWeek[0].date
+      return start
+    },
+    getTotal () {
+      let race = moment(this.raceDate, 'MMMM Do YYYY')
+      let start = moment(this.getPlanStartDate, 'MMMM Do YYYY')
+      let total = race.diff(start, 'days')
+      return total
+    },
     getDaysUntil () {
       let current = moment(this.date, 'MMMM Do YYYY')
       let race = moment(this.raceDate, 'MMMM Do YYYY')
@@ -58,6 +85,16 @@ export default {
         return day.date == this.date
       })
       return planData // Returns {...}
+    },
+    percentage () {
+      let total = this.getTotal - this.getDaysUntil
+      let grandTotal = this.getTotal
+      return total / grandTotal
+    },
+    progressBarStyle () {
+      return {
+        'width': (this.percentage * 100) + '%'
+      }
     }
   },
   methods: {
@@ -75,6 +112,21 @@ export default {
       } else if (plan.activity == 'Rest') {
         return plan.activity
       }
+    },
+    isARun(plan) {
+      return plan.activity == 'Run'
+    },
+    isARestDay(plan) {
+      return plan.activity == 'Rest'
+    },
+    isSpeedwork(plan) {
+      return plan.activity == 'Speedwork'
+    },
+    isLogged (plan) {
+      return plan.isLogged == true
+    },
+    logRun (plan) {
+      plan.isLogged = true
     }
   }
 }

@@ -31,11 +31,13 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: $light-gray;
   font-family: $roboto;
   padding: 16px;
+  height: 100vh;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .profile {
@@ -44,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
         font-weight: 500;
         text-transform: uppercase;
         font-size: 16px;
+        text-align: center;
     }
 
     &__img {
@@ -57,18 +60,73 @@ h1, h2, h3, h4, h5, h6, p {
 
 .tracker {
     font-size: 16px;
+    text-align: right;
+
     &__date {
         font-weight: 700;
     }
+
+    &__progress {
+        position: relative;
+        width: 200px;
+        height: 8px;
+        background-color: $black;
+        border-radius: 4px;
+        margin: 10px auto;
+    
+        &__bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          background-color: $violet;
+          border-radius: 4px;
+        }
+      }
 }
 
 .plan-card {
     background-color: $violet;
     border-radius: 8px;
     color: $light-gray;
-    font-family: $teko;
-    font-size: 120px;
-    text-transform: uppercase;
-    line-height: 1;
     text-align: center;
+    padding: 30px;
+
+    &__text-wrapper {
+        margin-bottom: 45px;
+    }
+
+    &__distance, &__units {
+        font-family: $teko;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    &__distance {
+        font-size: 120px;
+    }
+
+    &__units {
+        font-size: 32px;
+    }
+
+    &__note {
+        font-family: $roboto;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 700;
+    }
+}
+
+.log-btn {
+    appearance: none;
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    line-height: 1; 
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
 }
