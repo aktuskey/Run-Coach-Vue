@@ -2,7 +2,6 @@
   <div class="wrapper">
     <header class="header">
       <div class="profile__img" v-bind:style="{ 'background-image': 'url(' + profile.profileImage + ')' }"></div> 
-      <img v-bind:src="profile.profileImage">
       <div class="profile__name">{{ profile.firstName }}</div>
       <div class="tracker">
       <!-- <div class="tracker__week">Week 1</div> -->
