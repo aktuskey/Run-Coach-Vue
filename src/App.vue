@@ -48,6 +48,9 @@ export default {
       date: moment().format('MMMM Do YYYY')
     }
   },
+  mounted () {
+    this.plan = JSON.parse(window.localStorage.getItem('plan')) || this.plan
+  },
   computed: {
     raceDate () {
       return this.profile.targetRaceDate
@@ -111,6 +114,8 @@ export default {
         return plan.distance.join(', ')
       } else if (plan.activity == 'Rest') {
         return plan.activity
+      } else {
+        return plan.activity
       }
     },
     isARun(plan) {
@@ -126,7 +131,13 @@ export default {
       return plan.isLogged == true
     },
     logRun (plan) {
-      plan.isLogged = true
+      if (!plan.isLogged) {
+        plan.isLogged = true
+        window.localStorage.setItem('plan', JSON.stringify(this.plan))
+      } else {
+        plan.isLogged = false
+        window.localStorage.clear()
+      }
     }
   }
 }
